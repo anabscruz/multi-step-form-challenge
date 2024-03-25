@@ -1,3 +1,5 @@
+import { PersonalInfoStep } from "./PersonalInfo";
+
 interface formProps {
   render: Function;
   goNext: Function;

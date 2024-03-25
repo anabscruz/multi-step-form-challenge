@@ -5,12 +5,18 @@ export const Step = ({
 }: {
   stepNumber: number;
   description: string;
-  current?: void;
+  current?: boolean;
 }) => {
   return (
     <div className="flex items-center gap-x-4 gap-y-8">
       <div className="flex-none">
-        <p className="rounded-full border-white border text-white text-sm font-bold size-8 align-middle leading-7">
+        <p
+          className={`rounded-full text-sm font-bold size-8 flex items-center justify-center ${
+            current
+              ? "bg-sky-blue text-denim"
+              : "text-white border border-white"
+          }`}
+        >
           {stepNumber}
         </p>
       </div>
